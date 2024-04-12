@@ -32,8 +32,5 @@
 *.app
 
 # CMake
-CMakeCache.txt
-CMakeFiles/
-Makefile
-cmake_install.cmake
-lint
+build/
+build.sh
