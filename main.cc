@@ -1,51 +1,10 @@
 #include <iostream>
 #include <string>
-#include <stack>
-#include <queue>
 
 #include "linter.h"
-
-#define NEWLINE '\n'
-#define TAB '\t'
+#include "linter_lv1.h"
 
 using namespace std;
-
-class LinterLv1 : public Linter {
-public:
-    LinterLv1(const string& str_in) : Linter(str_in) {}
-
-    void lint() {
-        stack<char> stk;
-        int q_size = q.size();
-
-        for (int i = 0; i < q_size; i++) {
-            char cur = q.front();
-            switch (cur) {
-                case '{':
-                    stk.push(cur);
-                    q.push(cur);
-                    q.push(NEWLINE);
-                    break;
-                case ';':
-                    q.push(cur);
-                    q.push(NEWLINE);
-                    break;
-                case '}':
-                    stk.pop();
-                    q.push(cur);
-                    break;
-                default:
-                    if (!stk.empty() && q.back() == NEWLINE) {
-                        for (int j = 0; j < stk.size(); j++) {
-                            q.push(TAB);
-                        }
-                    }
-                    q.push(cur);
-            }
-            q.pop();
-        }
-    }
-};
 
 int main() {
     string in;

@@ -16,4 +16,5 @@ void Linter::print() {
         q.push(q.front());
         q.pop();
     }
+    std::cout << std::endl;
 }
