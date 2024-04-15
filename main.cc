@@ -4,6 +4,7 @@
 #include "linter.h"
 #include "lv1_stack_linter.h"
 #include "lv2_queue_linter.h"
+#include "lv3_complete_linter.h"
 
 using namespace std;
 
@@ -23,6 +24,9 @@ int main(int argc, char *argv[]) {
             break;
         case '2':
             linter = new QueueLinter(in);
+            break;
+        case '3':
+            linter = new CompleteLinter(in);
             break;
         default:
             cerr << "error: undefined level '" << argv[1][0] << "'" << endl;
