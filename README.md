@@ -9,3 +9,8 @@ cmake ..
 cmake --build .
 popd
 ```
+
+## Level overview
+
+1. Basic linting (braces, semicolon)
+2. Advanced linting (class)
