@@ -8,7 +8,6 @@ void QueueLinter::lint() {
 
     for (int i = 0; i < q_size; i++) {
         char cur = q.front();
-        int stk_size = q_stk.size();
         switch (cur) {
             case '{':
                 q_stk.push(cur);
