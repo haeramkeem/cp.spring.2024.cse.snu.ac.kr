@@ -2,8 +2,8 @@
 
 #include <stack>
 
-#define NEWLINE '\n'
-#define TAB '\t'
+const char NEWLINE = '\n';
+const char TAB = '\t';
 
 void LinterLv1::lint() {
     std::stack<char> stk;
