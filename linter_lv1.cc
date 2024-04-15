@@ -23,7 +23,11 @@ void LinterLv1::lint() {
                 break;
             case '}':
                 stk.pop();
+                for (int j = 0; j < stk.size(); j++) {
+                    q.push(TAB);
+                }
                 q.push(cur);
+                q.push(NEWLINE);
                 break;
             default:
                 if (!stk.empty() && q.back() == NEWLINE) {
