@@ -6,7 +6,6 @@ const char NEWLINE = '\n';
 const char TAB = '\t';
 
 void LinterLv1::lint() {
-    std::stack<char> stk;
     int q_size = q.size();
 
     for (int i = 0; i < q_size; i++) {
