@@ -1,5 +1,5 @@
-#ifndef HW_CP24S_CSE_SNU_AC_KR_LINTER_LV1_H_
-#define HW_CP24S_CSE_SNU_AC_KR_LINTER_LV1_H_
+#ifndef LV1_STACK_LINTER_H_
+#define LV1_STACK_LINTER_H_
 
 #include <stack>
 #include <string>
@@ -13,4 +13,4 @@ public:
     void lint() override;
 };
 
-#endif // HW_CP24S_CSE_SNU_AC_KR_LINTER_LV1_H_
+#endif // LV1_STACK_LINTER_H_
