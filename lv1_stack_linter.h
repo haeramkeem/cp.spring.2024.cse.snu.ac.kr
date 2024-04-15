@@ -5,11 +5,11 @@
 #include <string>
 #include "linter.h"
 
-class LinterLv1 : public Linter {
+class StackLinter : public Linter {
 private:
     std::stack<char> stk;
 public:
-    explicit LinterLv1(const std::string& str_in) : Linter(str_in) {}
+    explicit StackLinter(const std::string& str_in) : Linter(str_in) {}
     void lint() override;
 };
 

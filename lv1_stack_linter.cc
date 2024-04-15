@@ -1,11 +1,9 @@
-#include "linter_lv1.h"
-
-#include <stack>
+#include "lv1_stack_linter.h"
 
 const char NEWLINE = '\n';
 const char TAB = '\t';
 
-void LinterLv1::lint() {
+void StackLinter::lint() {
     int q_size = q.size();
 
     for (int i = 0; i < q_size; i++) {

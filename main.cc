@@ -2,7 +2,7 @@
 #include <string>
 
 #include "linter.h"
-#include "linter_lv1.h"
+#include "lv1_stack_linter.h"
 
 using namespace std;
 
@@ -10,7 +10,7 @@ int main() {
     string in;
     getline(cin, in);
 
-    Linter* lv1 = new LinterLv1(in);
+    Linter* lv1 = new StackLinter(in);
     lv1->lint();
     lv1->print();
     delete lv1;
