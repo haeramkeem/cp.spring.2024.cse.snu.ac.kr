@@ -12,5 +12,6 @@ popd
 
 ## Level overview
 
-1. Basic linting (braces, semicolon)
-2. Advanced linting (class)
+1. Basic linter (lint braces and semicolons) using stack
+2. Basic linter using queue
+3. Advanced linter

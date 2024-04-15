@@ -1,5 +1,5 @@
-#ifndef HW_CP24S_CSE_SNU_AC_KR_LINTER_H_
-#define HW_CP24S_CSE_SNU_AC_KR_LINTER_H_
+#ifndef LINTER_H_
+#define LINTER_H_
 
 #include <iostream>
 #include <string>
@@ -16,4 +16,4 @@ public:
     virtual void lint() = 0;
 };
 
-#endif // HW_CP24S_CSE_SNU_AC_KR_LINTER_H_
+#endif // LINTER_H_

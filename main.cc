@@ -2,18 +2,36 @@
 #include <string>
 
 #include "linter.h"
-#include "linter_lv1.h"
+#include "lv1_stack_linter.h"
+#include "lv2_queue_linter.h"
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
     string in;
     getline(cin, in);
 
-    Linter* lv1 = new LinterLv1(in);
-    lv1->lint();
-    lv1->print();
-    delete lv1;
+    if (argc < 2) {
+        cerr << "error: level not provided" << endl;
+        return 1;
+    }
+
+    Linter* linter;
+    switch (argv[1][0]) {
+        case '1':
+            linter = new StackLinter(in);
+            break;
+        case '2':
+            linter = new QueueLinter(in);
+            break;
+        default:
+            cerr << "error: undefined level '" << argv[1][0] << "'" << endl;
+            return 1;
+    }
+
+    linter->lint();
+    linter->print();
+    delete linter;
 
     return 0;
 }
