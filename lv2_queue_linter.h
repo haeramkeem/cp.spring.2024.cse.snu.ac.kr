@@ -10,7 +10,7 @@ private:
     std::queue<char> q_stk;
 public:
     explicit QueueLinter(const std::string& str_in) : Linter(str_in) {}
-    void lint() override;
+    int lint() override;
 };
 
 #endif // LV2_QUEUE_LINTER_H_

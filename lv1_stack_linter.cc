@@ -3,7 +3,7 @@
 const char NEWLINE = '\n';
 const char TAB = '\t';
 
-void StackLinter::lint() {
+int StackLinter::lint() {
     int q_size = q.size();
 
     for (int i = 0; i < q_size; i++) {
@@ -36,4 +36,6 @@ void StackLinter::lint() {
         }
         q.pop();
     }
+
+    return 0;
 }

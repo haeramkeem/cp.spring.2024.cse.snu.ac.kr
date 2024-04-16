@@ -3,7 +3,7 @@
 const char NEWLINE = '\n';
 const char TAB = '\t';
 
-void QueueLinter::lint() {
+int QueueLinter::lint() {
     int q_size = q.size();
 
     for (int i = 0; i < q_size; i++) {
@@ -40,4 +40,5 @@ void QueueLinter::lint() {
         }
         q.pop();
     }
+    return 0;
 }

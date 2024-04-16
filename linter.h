@@ -13,7 +13,7 @@ public:
     explicit Linter(const std::string& str_in);
     void print();
     virtual ~Linter() {}
-    virtual void lint() = 0;
+    virtual int lint() = 0;
 };
 
 #endif // LINTER_H_
