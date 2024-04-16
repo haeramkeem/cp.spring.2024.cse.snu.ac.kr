@@ -1,8 +1,5 @@
 #include "lv2_queue_linter.h"
 
-const char NEWLINE = '\n';
-const char TAB = '\t';
-
 int QueueLinter::lint() {
     int q_size = q.size();
 

@@ -9,6 +9,8 @@ class Linter {
 private:
     std::string err;
 protected:
+    const char TAB;
+    const char NEWLINE;
     std::queue<char> q;
 public:
     explicit Linter(const std::string& str_in);

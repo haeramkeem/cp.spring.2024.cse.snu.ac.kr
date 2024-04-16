@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-Linter::Linter(const std::string& str_in) {
+Linter::Linter(const std::string& str_in): NEWLINE('\n'), TAB('\t') {
     for (char c : str_in) {
         q.push(c);
     }

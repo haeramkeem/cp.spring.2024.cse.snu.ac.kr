@@ -1,8 +1,5 @@
 #include "lv1_stack_linter.h"
 
-const char NEWLINE = '\n';
-const char TAB = '\t';
-
 int StackLinter::lint() {
     int q_size = q.size();
 
