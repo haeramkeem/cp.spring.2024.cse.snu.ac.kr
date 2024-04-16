@@ -1,0 +1,11 @@
+{
+    "key1": "value1",
+    "object1": {
+        "key2": "value2",
+    },
+    "list1": [
+        "item1",
+        "item2",
+        "item3",
+    ],
+}

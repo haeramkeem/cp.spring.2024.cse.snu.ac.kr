@@ -29,9 +29,9 @@ int main(int argc, char *argv[]) {
             return 1;
     }
 
-    linter->lint();
+    int lint_result = linter->lint();
     linter->print();
     delete linter;
 
-    return 0;
+    return lint_result;
 }
