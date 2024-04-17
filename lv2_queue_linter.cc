@@ -22,7 +22,7 @@ int QueueLinter::lint() {
                 break;
             case ']':
             case '}':
-                for (int j = 0; j < q_stk.size() - 1; j++) {
+                for (int j = q_stk.size(); 1 < j; j--) {
                     q_stk.push(q_stk.front());
                     q_stk.pop();
                 }
