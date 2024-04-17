@@ -13,7 +13,7 @@ protected:
     const char TAB;
     const char NEWLINE;
     std::queue<char> q;
-    void setError();
+    void setError(std::string str_in = "error: invalid parentheses");
 public:
     explicit Linter(const std::string& str_in);
     virtual ~Linter() {}

@@ -7,22 +7,27 @@ int StackLinter::lint() {
     for (int i = 0; i < q_size; i++) {
         char cur = q.front();
         switch (cur) {
-            case ',':
-                q.push(cur);
-                q.push(NEWLINE);
-                q.pop();
-                break;
-            case '[':
+            case '(':
             case '{':
-                stk.push(cur);
-                i_size++;
+            case '[':
+                for (int j = 0; j < i_size; j++) {
+                    q.push(TAB);
+                }
                 q.push(cur);
                 q.push(NEWLINE);
+                i_size++;
+                stk.push(cur);
                 q.pop();
                 break;
-            case ']':
+            case ')':
             case '}':
-                if (stk.empty() || (stk.top() != '{' && cur == '}') || (stk.top() != '[' && cur == ']')) {
+            case ']':
+                if (
+                    stk.empty()
+                    || (stk.top() != '{' && cur == '}')
+                    || (stk.top() != '[' && cur == ']')
+                    || (stk.top() != '(' && cur == ')')
+                ) {
                     setError();
                     return 1;
                 }
@@ -32,19 +37,9 @@ int StackLinter::lint() {
                     q.push(TAB);
                 }
                 q.push(cur);
+                q.push(NEWLINE);
                 q.pop();
-                if (q.front() != ',') {
-                    q.push(NEWLINE);
-                }
                 break;
-            default:
-                if (q.back() == NEWLINE) {
-                    for (int j = 0; j < i_size; j++) {
-                        q.push(TAB);
-                    }
-                }
-                q.push(cur);
-                q.pop();
         }
     }
 

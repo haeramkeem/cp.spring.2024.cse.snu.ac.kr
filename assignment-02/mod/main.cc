@@ -5,33 +5,22 @@
 #include "lv1_stack_linter.h"
 #include "lv2_queue_linter.h"
 
-using namespace std;
+int main() {
+    std::cout << "Input: ";
+    std::string in;
+    getline(std::cin, in);
 
-int main(int argc, char *argv[]) {
-    string in;
-    getline(cin, in);
+    std::cout << "----- StackLinter -----" << std::endl;
+    Linter* stk_linter = new StackLinter(in);
+    int stk_lint_result = stk_linter->lint();
+    stk_linter->print(stk_lint_result);
+    delete stk_linter;
 
-    if (argc < 2) {
-        cerr << "error: level not provided" << endl;
-        return 1;
-    }
+    std::cout << "----- QueueLinter -----" << std::endl;
+    Linter* q_linter = new QueueLinter(in);
+    int q_lint_result = q_linter->lint();
+    q_linter->print(q_lint_result);
+    delete q_linter;
 
-    Linter* linter;
-    switch (argv[1][0]) {
-        case '1':
-            linter = new StackLinter(in);
-            break;
-        case '2':
-            linter = new QueueLinter(in);
-            break;
-        default:
-            cerr << "error: undefined level '" << argv[1][0] << "'" << endl;
-            return 1;
-    }
-
-    int lint_result = linter->lint();
-    linter->print(lint_result);
-    delete linter;
-
-    return lint_result;
+    return stk_lint_result + q_lint_result;
 }

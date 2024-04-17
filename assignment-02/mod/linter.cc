@@ -35,6 +35,6 @@ void Linter::print(const int& lint_status) {
     }
 }
 
-void Linter::setError() {
-    setQ("error: invalid parentheses");
+void Linter::setError(std::string str_in) {
+    setQ(str_in);
 }
