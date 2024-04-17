@@ -27,7 +27,7 @@ int QueueLinter::lint() {
                     q_stk.pop();
                 }
                 if (q_stk.empty() || (q_stk.front() != '{' && cur == '}') || (q_stk.front() != '[' && cur == ']')) {
-                    setError("error");
+                    setError();
                     return 1;
                 }
                 q_stk.pop();
@@ -53,7 +53,7 @@ int QueueLinter::lint() {
     }
 
     if (!q_stk.empty()) {
-        setError("error");
+        setError();
         return 1;
     }
 

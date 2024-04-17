@@ -1,29 +1,40 @@
 #include "linter.h"
 
 #include <iostream>
+#include <queue>
 #include <string>
 
 Linter::Linter(const std::string& str_in): NEWLINE('\n'), TAB('\t') {
-    for (char c : str_in) {
-        q.push(c);
-    }
-    err = "";
+    setQ(str_in);
 }
 
-void Linter::print() {
-    if (err != "") {
-        std::cerr << err << std::endl;
-        return;
+void Linter::setQ(const std::string &str_in) {
+    std::queue<char> tmp_q;
+    for (char c : str_in) {
+        tmp_q.push(c);
     }
+    this->q = tmp_q;
+}
+
+std::string Linter::getQ() {
+    std::string res = "";
     int q_size = q.size();
-    for (int i = 0; i < q_size; ++i) {
-        std::cout << q.front();
+    for (int i = 0; i < q_size; i++) {
+        res += q.front();
         q.push(q.front());
         q.pop();
     }
-    std::cout << std::endl;
+    return res;
 }
 
-void Linter::setError(const std::string& err) {
-    this->err = err;
+void Linter::print(const int& lint_status) {
+    if (lint_status == 0) {
+        std::cout << getQ() << std::endl;
+    } else {
+        std::cerr << getQ() << std::endl;
+    }
+}
+
+void Linter::setError() {
+    setQ("error: invalid parentheses");
 }

@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
     }
 
     int lint_result = linter->lint();
-    linter->print();
+    linter->print(lint_result);
     delete linter;
 
     return lint_result;

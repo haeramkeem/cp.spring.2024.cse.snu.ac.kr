@@ -23,7 +23,7 @@ int StackLinter::lint() {
             case ']':
             case '}':
                 if (stk.empty() || (stk.top() != '{' && cur == '}') || (stk.top() != '[' && cur == ']')) {
-                    setError("error");
+                    setError();
                     return 1;
                 }
                 stk.pop();
@@ -49,7 +49,7 @@ int StackLinter::lint() {
     }
 
     if (!stk.empty()) {
-        setError("error");
+        setError();
         return 1;
     }
 
