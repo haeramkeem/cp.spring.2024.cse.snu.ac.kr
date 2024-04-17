@@ -7,16 +7,17 @@
 
 class Linter {
 private:
-    std::string err;
+    void setQ(const std::string& str_in);
+    std::string getQ();
 protected:
     const char TAB;
     const char NEWLINE;
     std::queue<char> q;
+    void setError(std::string str_in = "error: invalid parentheses");
 public:
     explicit Linter(const std::string& str_in);
-    void print();
-    void setError(const std::string& err);
     virtual ~Linter() {}
+    void print(const int& lint_status);
     virtual int lint() = 0;
 };
 

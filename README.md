@@ -1,16 +1,12 @@
-# Computer Programming HW#2 (SNU CSE cp24s)
+# Computer Programming TA CodeBase (SNU CSE cp24s)
 
-## Getting started
+## Index
 
-```bash
-mkdir -pv build
-pushd build
-cmake ..
-cmake --build .
-popd
-```
+### Lab
 
-## Level overview
+- [Lab 02 (Mar 20, 2024)](./lab-02)
+- [Lab 05 (Apr 17, 2024)](./lab-05)
 
-1. Basic linter using stack
-2. Basic linter using queue
+### Assignment
+
+- [Assignment 02 (Apr 17, 2024)](./assignment-02)
