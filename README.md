@@ -13,4 +13,4 @@
 
 ### Exam
 
-- [Exam 01 (May 2, 2024)](./exam-01)
+- [Midterm Question #14 (May 2, 2024)](./exam/midterm)
