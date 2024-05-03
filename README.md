@@ -10,3 +10,7 @@
 ### Assignment
 
 - [Assignment 02 (Apr 17, 2024)](./assignment-02)
+
+### Exam
+
+- [Exam 01 (May 2, 2024)](./exam-01)
