@@ -33,10 +33,19 @@
 *.class
 
 # Custom settings
-build/
 *.sh
 *.swp
 *.log
 
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+# Assignment #2
+lint
+
+# Final
 exam/final/*
 !exam/final/Q7Answer.java
