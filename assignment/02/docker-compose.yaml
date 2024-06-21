@@ -1,0 +1,8 @@
+services:
+  2022-15524:
+    image: ghcr.io/haeramkeem/assignment-02.cp24s.cse.snu.ac.kr:latest
+    volumes:
+      - ./:/submit
+    environment:
+      - ID=2022-15524
+      - INPUT_F=김채연20224_156103_4257388_2022-15524_assignment02.cc
