@@ -5,7 +5,7 @@
 - Class:
   - Computer Programming (Spring 2024, Prof. Hyeonsang Eom)
 - Version info:
-  - Last modified time: `Wed Apr 17 19:50:18 KST 2024`
+  - Last modified time: `Mon Apr 22 08:51:40 KST 2024`
 - Contact info:
   - Email: haeram.kim1@snu.ac.kr
 
@@ -38,6 +38,7 @@
 	{
 	}
 }
+
 ```
 
 - Additional lint examples are listed in section 2.1.
@@ -81,6 +82,7 @@ error: invalid parentheses
 	{
 	}
 }
+
 ```
 
 #### 2.1.2
@@ -100,6 +102,7 @@ error: invalid parentheses
 }
 {
 }
+
 ```
 
 #### 2.1.3
@@ -112,6 +115,13 @@ error: invalid parentheses
 
 - Output:
 
+
+
+
+
+
+
+
 ```
 [
 	{
@@ -121,6 +131,7 @@ error: invalid parentheses
 	(
 	)
 ]
+
 ```
 
 ### 2.2. Lint Error Examples
@@ -218,7 +229,7 @@ error: invalid parentheses
 - Deadline: Apr 30 23:59, 2024
   - Late submission: `pts -1` for 1 day delay, `0` after May 8 00:00, 2024
 - Submission:
-  - Filename: `학번_assignment02.cc`
+  - Filename: `학번_assignment02.cc` (e.g. `2024-12345_assignment02.cc`)
   - Location: online ETL
 - Scores (total 8 pts):
   - Level 1: 4 pts

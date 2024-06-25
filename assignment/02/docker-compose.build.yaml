@@ -1,0 +1,6 @@
+services:
+  builder:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    image: ghcr.io/haeramkeem/assignment-02.cp24s.cse.snu.ac.kr:latest

@@ -30,23 +30,17 @@
 *.exe
 *.out
 *.app
-*.class
 
 # Custom settings
 *.swp
 *.log
 
 # CMake
-CMakeCache.txt
-CMakeFiles/
-Makefile
-cmake_install.cmake
+**/CMakeCache.txt
+**/CMakeFiles/
+**/Makefile
+**/cmake_install.cmake
 
 # Assignment #2
-lint
-assignment/02/submissions/*
-!assignment/02/submissions/.gitkeep
-
-# Final
-exam/final/*
-!exam/final/Q7Answer.java
+**/lint
+**/answer/
