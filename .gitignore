@@ -30,9 +30,13 @@
 *.exe
 *.out
 *.app
+*.class
 
 # Custom settings
 build/
 *.sh
 *.swp
 *.log
+
+exam/final/*
+!exam/final/Q7Answer.java
